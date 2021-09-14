@@ -36,9 +36,8 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-    
         Order::create($request->all());
-        return redirect('/')->with(['success_message'=>'Продукт успешно добавлено в корзину!']);
+        return redirect('/')->with(['success_message'=>'Благодарим за покупку!']);
     }
 
     /**

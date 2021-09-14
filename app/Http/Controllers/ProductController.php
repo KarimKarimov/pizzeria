@@ -20,7 +20,7 @@ class ProductController extends Controller
         $toppings=Topping::all();
         $categories=Category::all();
         $products = Product::all();
-        $pd_tops = Product::select('*')->join('orders','products.id','=','orders.product_id')->whereIn('category_id',array(1,2))->take(10)->get();
+        $pd_tops = Product::select('*','orders.created_at')->join('orders','products.id','=','orders.product_id')->whereIn('products.category_id',array(1,2))->orderBy('orders.created_at','desc')->take(10)->get();
         return view('frontend.products',compact('products','pd_tops','toppings','categories'));
     }
 

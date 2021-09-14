@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <div class="col-7" style="text-align: end;">
-                                <button type="submite" class="btn btn-primary waves-effect waves-light">В корзину</button>
+                                <button type="submite" class="btn btn-primary waves-effect waves-light">Заказать</button>
                             </div>
                         </div>
                     </div>
